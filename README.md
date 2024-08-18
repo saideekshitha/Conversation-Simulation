@@ -12,7 +12,6 @@ This project demonstrates a simple simulation of two `Player` instances communic
 
 To build the project, ensure you have [Maven](https://maven.apache.org/) installed. Run the following command to clean and build the project:
 
-```bash
 mvn clean install
 
 ## Running the Simulation
@@ -21,22 +20,18 @@ mvn clean install
 
 To run the simulation with both players in the same Java process, execute the following command:
 
-```bash
 java -cp target/conversation-0.0.1-SNAPSHOT.jar conversation.InitiateComm
 
 ## Running in Separate Java Processes
 
 To run the simulation with each player in a separate Java process, execute the following command:
 
-```bash
 java -cp target/conversation-0.0.1-SNAPSHOT.jar conversation.InitiateComm "separate-process"
 
 ## Automated Build and Execution Script
 
 The project includes a Bash script to automate the build and execution process. Save the following script as `run.sh` and make it executable with `chmod +x run.sh`.
 
-```bash
-#!/bin/bash
 mvn clean install
 # Check if Maven build was successful
 if [ $? -eq 0 ]; then
@@ -51,7 +46,6 @@ else
 fi
 ## To run the script, use:
 
-```bash
 ./run.sh
 ## Description of Components
 
@@ -73,12 +67,9 @@ The `InitiateComm` class initializes the players and starts them either in the s
 - Modify the port number and other configuration details if needed.
 - The project uses basic socket communication and threading, which is suitable for simple simulations but may need adjustments for more complex scenarios.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - Maven for project management.
 - Java's socket and threading libraries for enabling inter-process communication.
+
 
